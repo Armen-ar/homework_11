@@ -8,7 +8,7 @@ def load_candidates_from_json(path):
         return json.load(file)
 
 
-def get_candidate(candidate_id):
+def get_candidate(candidate_id: int) -> None:
     """Функция получает аргумент номер кандидата и
      Возвращает информацию о кандидате"""
     candidates = load_candidates_from_json('candidates.json')
@@ -19,7 +19,7 @@ def get_candidate(candidate_id):
     return None
 
 
-def get_candidates_by_name(candidates_name):
+def get_candidates_by_name(candidates_name: str) -> list:
     """Функция получает аргумент строку букв и при совпадении в имени кандидата
     Возвращает информацию о кандидатах, где будет совпадение"""
     candidates = load_candidates_from_json('candidates.json')
@@ -31,7 +31,7 @@ def get_candidates_by_name(candidates_name):
     return candidates_list
 
 
-def get_candidates_by_skill(candidates_skill):
+def get_candidates_by_skill(candidates_skill: str) -> list:
     """Функция получает аргумент навык и возвращает информацию
      О кандидатах, обладающих этими навыками"""
     candidates = load_candidates_from_json('candidates.json')
